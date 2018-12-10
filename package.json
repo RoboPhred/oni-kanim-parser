@@ -12,6 +12,9 @@
     "format": "prettier --write ./src/**/*.ts",
     "prepublishOnly": "npm run build"
   },
+  "bin": {
+    "oni-kanim-parser": "./cli/oni-kanim-parser.js"
+  },
   "keywords": [
     "ONI",
     "Oxygen Not Included",
@@ -25,6 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/deep-diff": "^1.0.0",
+    "@types/gm": "^1.18.2",
     "@types/lodash.flowright": "^3.5.3",
     "@types/long": "^4.0.0",
     "@types/minimist": "^1.2.0",
@@ -32,14 +36,15 @@
     "@types/text-encoding": "0.0.33",
     "deep-diff": "^1.0.2",
     "lodash.flowright": "^3.5.0",
-    "minimist": "^1.2.0",
     "prettier": "^1.13.4",
     "rimraf": "^2.6.2",
     "typescript": "^2.9.1"
   },
   "dependencies": {
+    "gm": "^1.23.1",
     "jsonschema": "^1.2.4",
     "long": "^4.0.0",
+    "minimist": "^1.2.0",
     "text-encoding": "^0.6.4"
   }
 }
