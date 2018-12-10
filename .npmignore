@@ -1,0 +1,8 @@
+.vscode/
+src/
+lib/test/
+/dts/test/
+lib/**/*.map
+src/
+test-data/
+TODO.md
