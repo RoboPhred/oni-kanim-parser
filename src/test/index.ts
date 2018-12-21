@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, fstat } from "fs";
 
 import compose from "lodash.flowright";
 
