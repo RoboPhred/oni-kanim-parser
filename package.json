@@ -1,6 +1,6 @@
 {
   "name": "oni-kanim-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for Oxygen Not Included animation files.",
   "main": "lib/index.js",
   "types": "dts/index.d.ts",
