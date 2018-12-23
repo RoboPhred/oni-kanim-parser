@@ -8,6 +8,8 @@ import { parseKAnimBuild, unparseKAnimBuild } from "./build-structure/parser";
 export { progressReporter } from "./progress";
 export { tagReporter } from "./tagger";
 
+export * from "./build-structure";
+
 export function parseKBuild(
   data: ArrayBuffer,
   interceptor?: ParseInterceptor
