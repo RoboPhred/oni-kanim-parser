@@ -15,15 +15,15 @@ export function parseKBuild(
   interceptor?: ParseInterceptor
 ): KAnimBuild {
   let reader = new ArrayDataReader(data);
-  const saveGame = parse<KAnimBuild>(reader, parseKAnimBuild(), interceptor);
-  return saveGame;
+  const kBuild = parse<KAnimBuild>(reader, parseKAnimBuild(), interceptor);
+  return kBuild;
 }
 
 export function writeKBuild(
-  save: KAnimBuild,
+  kBuild: KAnimBuild,
   interceptor?: UnparseInterceptor
 ): ArrayBuffer {
   const writer = new ArrayDataWriter();
-  unparse<KAnimBuild>(writer, unparseKAnimBuild(save), interceptor);
+  unparse<KAnimBuild>(writer, unparseKAnimBuild(kBuild), interceptor);
   return writer.getBytes();
 }

@@ -1,4 +1,4 @@
-import { readFileSync, mkdirSync, rename } from "fs";
+import { readFileSync, mkdirSync, writeFileSync } from "fs";
 
 import path from "path";
 
@@ -21,11 +21,10 @@ if (args._.length < 2) {
 const imageFilePath = path.resolve(args._[0]);
 const buildFilePath = path.resolve(args._[1]);
 
-const imageBuf = readFileSync(imageFilePath);
-
 const build = loadBuildFile(buildFilePath);
 
 console.log(`Loaded ${build.symbols.length} symbols.`);
+writeFileSync(`${buildFilePath}.json`, JSON.stringify(build, null, 2));
 extractSprites(build)
   .then(() => {
     console.log("Done.");
